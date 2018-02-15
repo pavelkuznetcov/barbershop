@@ -117,7 +117,7 @@
 	 		<section class="footer-contacts">
 	 			Барбершоп "Бородинский"<br>
 	 			Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-	 			<a href="#">Как нас найти?</a><br>
+	 			<a class="js-open-map" href="map.html">Как нас найти?</a><br>
 	 			Телефон: +7 (812) 666-02-66
 	 		</section>
 	 		<section class="footer-social">
@@ -128,7 +128,7 @@
 	 		</section>
 	 		<section class="footer-copyright">
 	 			<p>Разработано:</p>
-	 			<a class="btn" href="#">macbashin</a>
+	 			<a class="btn" href="#">html academy</a>
 	 		</section>
 	 		
 	 	</div>
@@ -140,7 +140,7 @@
 	 	<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
 	 		<input class="icon-user" type="text" name="login" placeholder="Логин">
 	 		<input class="icon-password" type="password" name="password" placeholder="Пароль">
-	 		<label class="login-checkbox">
+	 		<label class="custom-checkbox">
 	 			<input type="checkbox" name="remember">
 	 			<span class="checkbox-indicator"></span>
 	 			Запомните меня
@@ -178,18 +178,23 @@
 
 	 </script>
 	 <script>
-	 	var mapOpen = document.querySelector(".js-open-map");
+	 	var mapOpenMultiple = document.querySelectorAll(".js-open-map");
 	 	var mapPopup = document.querySelector(".modal-content-map");
 	 	var mapClose = mapPopup.querySelector(".modal-content-close");
 	 	var overlay = document.querySelector(".modal-overlay");
+	 	
+	 	setEventListToOpenMap();
 
-
-	 	mapOpen.addEventListener("click", function(event){
-	 		event.preventDefault();
-	 	    mapPopup.classList.add("modal-content-show");
-	 	    overlay.classList.add("modal-overlay-show");
-
-	 	});
+	 	function setEventListToOpenMap(){
+	 		for(var i=0; i<mapOpenMultiple.length; i++){
+	 			mapOpenMultiple[i].addEventListener("click", function(event){
+		 			event.preventDefault();
+		 	    	mapPopup.classList.add("modal-content-show");
+		 	    	overlay.classList.add("modal-overlay-show");
+	 		});
+	 	}
+	 	
+	 	}
 
 	 	mapClose.addEventListener("click", function(event){
 	 		event.preventDefault();
