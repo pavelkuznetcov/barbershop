@@ -694,7 +694,8 @@ p.selected-item-area {
 }
 
 .btn-show {
-	display: block;
+	/*width: 110px;*/
+	padding: 14px 33px; 
 }
 
 .item-for-sale {
