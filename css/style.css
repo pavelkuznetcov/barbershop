@@ -759,8 +759,8 @@ p.brand {
 .price-holder {
 	display: inline-block;
 	text-align: center;
-	padding-top: 14px;
-	padding-bottom: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	/*background-color: rgba(300, 150, 10, 0.2);*/
 	width: 106px;
 }
@@ -772,7 +772,7 @@ p.brand {
 .price-btn {
 	float: right;
 	margin-right: 0;
-	padding: 14px 20px;
+	padding: 10px 20px;
 }
 
 .page-nav-bottom {
